@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { api } from "~/utils/api";
 import { toast } from "react-hot-toast";
-import { LoadingPage } from "./Loader";
+import { LoadingPage, LoadingSpinner } from "./Loader";
 
 const CreatePostWizard = () => {
   const { user } = useUser();
@@ -60,7 +60,7 @@ const CreatePostWizard = () => {
       )}
       {isPosting && (
         <div className="flex items-center justify-center">
-          <LoadingPage size={20} />
+          <LoadingSpinner size={20} />
         </div>
       )}
     </div>
