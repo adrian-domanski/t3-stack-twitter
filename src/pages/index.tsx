@@ -16,7 +16,7 @@ const Feed = () => {
   if (isLoading) return <LoadingPage />;
 
   return (
-    <div className="flex flex-col overflow-y-scroll scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-700">
+    <div className="flex flex-col overflow-y-auto scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-700">
       {data?.map(({ post, author }) => (
         <PostView key={post.id} post={post} author={author} />
       ))}
