@@ -52,7 +52,9 @@ const ProfilePage: NextPage<{ username: string }> = ({ username }) => {
           data.username ?? data.externalUsername ?? "unknown"
         }`}</div>
         <div className="w-full border-b border-slate-400" />
-        <ProfileFeed userId={data.id} />
+        <div className="overflow-y-scroll scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-700">
+          <ProfileFeed userId={data.id} />
+        </div>
       </PageLayout>
     </>
   );

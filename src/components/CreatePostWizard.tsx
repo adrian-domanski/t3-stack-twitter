@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { api } from "~/utils/api";
 import { toast } from "react-hot-toast";
-import { LoadingPage, LoadingSpinner } from "./Loader";
+import { LoadingSpinner } from "./Loader";
 
 const CreatePostWizard = () => {
   const { user } = useUser();
